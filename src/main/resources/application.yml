@@ -1,0 +1,17 @@
+# steam
+steam:
+  api_key: "XXXXXXXXXXXXXXXXXXXXXX"
+  #被偷窥的玩家id
+  players:
+    abd:328017175,
+#    abd:328017175,
+#    abd:328017175,
+  dota2Robot:
+    # miraiOK服务器及端口
+    webIp: 0.0.0.0:8080
+    # QQ号
+    qq: 111111
+    # 发往QQ群号
+    target: 11111
+    # miraiOK的authKey(启动打印信息中有)
+    authKey: INITKEY9P0t9PJq
