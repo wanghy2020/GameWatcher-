@@ -19,9 +19,15 @@ public class WatcherStart implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        while (true){
-            dota2Robot.run();
-            Thread.sleep(1000 * 60 * 10);
-        }
+        new Thread(()->{
+            while (true){
+                dota2Robot.run();
+                try {
+                    Thread.sleep(1000 * 60 * 10);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
     }
 }

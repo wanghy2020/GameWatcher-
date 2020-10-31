@@ -95,6 +95,9 @@ public class Dota2Match extends Match {
         this.duration = MessageFormat.format("{0}分{1}秒", match.getLong("duration") / 60,
                 match.getLong("duration") % 60);
         this.gameMode = MessageFormat.format("[{0}/{1}]",
-                common.getGAME_MODE()[match.getInteger("game_mode") - 1], common.getLOBBY()[match.getInteger("lobby_type") + 1]);
+                common.getGAME_MODE()[match.getInteger("game_mode") > common.getGAME_MODE().length ? 0
+                        : match.getInteger("game_mode") - 1],
+                common.getLOBBY()[(match.getInteger("lobby_type") > common.getLOBBY().length) ? 0
+                        : match.getInteger("lobby_type") + 1]);
     }
 }
